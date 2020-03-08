@@ -7,6 +7,7 @@ RUN curl -s https://install.zerotier.com | bash
 
 # ZeroTier relies on UDP port 9993
 EXPOSE 9993/udp
+EXPOSE 3128/tcp
 
 RUN mkdir -p /var/lib/zerotier-one
 
