@@ -7,7 +7,7 @@ squid
 
 # execute additional commands
 if [[ ! -z ${1} ]]; then
-  bash -c "$@"
+  eval "$@"
 fi
 
 while sleep 60; do
