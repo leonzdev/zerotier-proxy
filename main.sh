@@ -5,7 +5,10 @@ zerotier-one -d
 # start squid
 squid
 
-exec "$@"
+# execute additional commands
+if [[ ! -z ${1} ]]; then
+  bash -c "$@"
+fi
 
 while sleep 60; do
   ps aux | grep zerotier |grep -q -v grep
