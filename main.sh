@@ -5,6 +5,8 @@ zerotier-one -d
 # start squid
 squid
 
+exec "$@"
+
 while sleep 60; do
   ps aux | grep zerotier |grep -q -v grep
   PROCESS_1_STATUS=$?
